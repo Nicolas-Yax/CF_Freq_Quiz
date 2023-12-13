@@ -113,8 +113,9 @@ const init = async () => {
             new_question = {};
             new_question["text"] = packs[j][i].question;
             new_question["answers"] = packs[j][i].answers;
-            new_question["entered"] = 0;
-            new_question["type"]  = "single";
+            new_question["entered"] = [''];
+            //new_question["type"]  = "single";
+            new_question['type'] = 'long'
             new_question["index"] = j*8+i;
             new_question["index_um"] = packs[j][i]['info']['index_um'];
             new_question['order'] = packs[j][i]['info']['order'];
