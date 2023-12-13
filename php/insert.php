@@ -3,9 +3,8 @@
 include 'connectDB.php';
 
 $prolific_id             = stripslashes(htmlspecialchars($_POST['prolificID']));
-$cond                    = stripslashes(htmlspecialchars($_POST['cond']));
+$index_um                = stripslashes(htmlspecialchars($_POST['index_um']));
 $id_question             = stripslashes(htmlspecialchars($_POST['questionID']));
-$id_sequence             = stripslashes(htmlspecialchars($_POST['sequenceID']));
 $question                = stripslashes(htmlspecialchars($_POST['question']));
 $answer                  = stripslashes(htmlspecialchars($_POST['answer']));
 $rt                      = stripslashes(htmlspecialchars($_POST['rt']));
@@ -22,7 +21,7 @@ if ($db->connect_error) {
   die("Connection failed: " . $db->connect_error);
 }
 # '$variable' if string, otherwise $variable
-$sql = "INSERT INTO nicolas_cf_freq_llm (prolific_id, id_question, question, answer, rt, time) VALUES ('$prolific_id', $id_question, '$question', '$answer', $rt, NOW())";
+$sql = "INSERT INTO nicolas_cf_freq_llm (prolific_id, index_um, id_question, question, answer, rt, time) VALUES ('$prolific_id', $index_um, $id_question, '$question', '$answer', $rt, NOW())";
 
 if ($db->query($sql) === TRUE) {
   echo "New record created successfully";
