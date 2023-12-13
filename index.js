@@ -95,7 +95,7 @@ const init = async () => {
     if (dataset.condition == 'example'){
         var json = await $.getJSON("db_ex.json");
     }else{
-        var json = await $.getJSON("db.json");
+        var json = await $.getJSON("data/db.json");
     }
     var packs = [json[2*pack_id],json[2*pack_id+1]];
     var new_question;
