@@ -114,7 +114,7 @@ const init = async () => {
             new_question["text"] = packs[j][i].question;
             new_question["answers"] = packs[j][i].answers;
             new_question["entered"] = [''];
-            new_question['append'] = "Out of  the hundred";
+            new_question['append'] = "Out of the hundred";
             new_question['type'] = 'long'
             new_question["index"] = j*8+i;
             new_question["index_um"] = packs[j][i]['info']['index_um'];
@@ -577,6 +577,10 @@ const loadQuestion = async (question, init, additional = false, show_title = tru
         }
         loadPreviousEnteredChoice(question.entered);
     } else if (question.type == `short` || question.type == `long`) {
+        appendDilemma(question.answers[0], currentQuestionIndex + 1)
+        appendTextFormQuestion(question, additional);
+        
+        appendDilemma(question.answers[1], currentQuestionIndex + 1)
         appendTextFormQuestion(question, additional);
         //loadPreviousEnteredText(question.entered)
     }
