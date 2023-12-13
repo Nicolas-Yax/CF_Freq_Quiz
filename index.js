@@ -74,14 +74,14 @@ function main() {
 // Initialization functions go here
 const init = async () => {
 
-    const pack_id = 0; /*await $.ajax({
+    const pack_id = await $.ajax({
         type: 'POST',
         async: true,
         data: {},
         url: 'php/get_index.php',
         success: function (r) {return r;},
         error: function (r) {console.log('error getting index');return 0;}
-    });*/
+    });
     console.log(prolificID);
     var data = {
         "prolific_id": prolificID,
@@ -577,10 +577,10 @@ const loadQuestion = async (question, init, additional = false, show_title = tru
         }
         loadPreviousEnteredChoice(question.entered);
     } else if (question.type == `short` || question.type == `long`) {
-        appendDilemma(question.answers[0], currentQuestionIndex + 1)
+        appendDilemma(question.answers[0], 1)
         appendTextFormQuestion(question, additional);
 
-        appendDilemma(question.answers[1], currentQuestionIndex + 2)
+        appendDilemma(question.answers[1], 2)
         appendTextFormQuestion(question, additional);
         //loadPreviousEnteredText(question.entered)
     }
