@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>Survey</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+		
+    <script type="module" src="index.js"></script>
+    <script type="module" src="question_example.js"></script>
+    <script type="module" src="dataset.js"></script>
+    
+    <link rel="icon"  href="images/logo-ens-white.png" />
+
+</head>
+
+<body>
+    <div class="quiz-page-template-container" id="quiz-page-template-container">
+            <div class="quiz-header-container">
+            <div class="question-iteration-container">
+                <div class="progress-bar-container" id="progress">
+                    <span class="progress-bar-text" id="progress-bar-text"></span>
+                    <div class="progress quiz-completion-outer-progress-bar" style="height: 3px;">
+                        <div class="quiz-completion-inner-progress-bar" id="quiz-progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+               <!-- <div class="question-iteration-container-single" id="previous-question-load">
+                    <span class="question-iteration-icon"> ^ </span>                         
+                </div>                                                                      
+                <div class="icon-flipped question-iteration-container-single" id="next-question-load">
+                   <span class="question-iteration-icon"> ^ </span>                         
+                </div>                                                                       -->
+            </div>
+
+
+            <div class="quiz-header-logo-container"></div>
+            <div class="quiz-name-text-container">
+                <span class="quiz-name-text"></span>
+            </div>
+            <!-- <div class="page-header-button-container"> -->
+                <!-- <button class="page-header-button"> -->
+                    <!-- Exit -->
+                <!-- </button> -->
+            <!-- </div> -->
+        </div>
+        <div class="quiz-main-page" id="quiz-main-page">
+            <div class="quiz-question-container wrapper box" id="quiz-question-container">
+                <!-- <div class="quiz-question-text-container quiz-question-story-container" id="quiz-question-text-container"> -->
+                <!-- </div> -->
+                <!-- <div class="quiz-question-text-container quiz-question-dilemma-container" id="quiz-dilemma-container"> -->
+                    <!-- <div class="quiz-question-text-item" id="quiz-question-dilemma"></div> -->
+                <!-- </div> -->
+
+                <!-- <div class="quiz-answer-text-container" id="quiz-answer-text-container"> -->
+                    <!-- <ul class="quiz-answer-list" id="quiz-answer-list"> -->
+                    <!-- </ul> -->
+                </div>
+            <!-- </div> -->
+               <!-- <div class="question-iteration-container-single" id="previous-question-load">
+                    <span class="question-iteration-icon"> ^ </span>                         
+                </div>                                                                      
+                <div class="icon-flipped question-iteration-container-single" id="next-question-load">
+                   <span class="question-iteration-icon"> ^ </span>                         
+                </div>                                                                       -->
+        </div>
+
+    <div id="prolific-id" class="prolific-id"></div>
+    <!-- <div class="notif show" id="notif"> -->
+        <!-- <span class="fa-solid fa-exclamation-circle"></span>  <b>Data sent</b><br> -->
+        <!-- <p id="notif-text"></p> -->
+    <!-- </div> -->
+    </div>
+    </body>
+
+</html>

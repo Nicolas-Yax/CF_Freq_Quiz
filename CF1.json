@@ -1,0 +1,21 @@
+{
+    "question_model":"Let there be 100 people who [training 1] while also [hobby 1]. Considering this particular group of people... ",
+    "answers_model":["How many would you say [work 1].","How many would you say [work 1] AND [hobby 2]."],
+	"name":["Andie", "Ari", "Brook", "Dawson", "Cameron", "Perry", "Riley", "Sawyer", "Sloan", "Rowan", "Jude", "Maxwell", "River", "Morgan", "Nicky", "Tyler"],
+	"training 1":{
+		"S":["were mechanical engineers by training", "had a PhD in applied math", "had Masters in Astronomy", "were microbiologists by training"],
+		"A":["were ballet dancers by training", "had PhDs in Art History", "had Master degrees in Film Theory", "were orchestra conductors by training"]
+	},
+	"hobby 1":{
+		"S":["collecting minerals and crystals, as a hobby", "flying high-end drones for fun", "contributing frequently to programming forums during sparse time", "playing chess as often as possible"],
+		"A":["studying painting and sculpting for fun", "writing amateur novels online", "often spending week-ends in museums", "performing artistic photography, as a hobby"]
+	},
+	"work 1":{
+		"S":["work for a known tech company", "are logistics consultants for an important car company", "work in a micro-components factory","are analysts for an international airline"],
+		"A":["is a consultant for the British Museum", "is an advisor to the Minister of Culture", "is an editor for a large online newspaper", "works for a well known Hollywood film production company"]
+	},
+	"hobby 2":{
+		"S":["build model airplanes as a hobby", "play Go, during spare time", "enjoy restoring old arcade video games during the week-ends", "volunteer as math teachers in a Prison"],
+		"A":["collect Victor Hugo 1st editions", "collect modern art", "help at a charity for migrant writers", "learn Chinese calligraphy, as a hobby"]
+	}
+}

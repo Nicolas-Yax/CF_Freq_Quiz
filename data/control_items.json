@@ -1,0 +1,12 @@
+[
+    {
+          "title": "sControl",
+          "text": "Adam is driving his motorboat when he notices five swimmers drowning in the \n distance. If Adam does not drive toward them at top speed he will not arrive in time, and all five will die. In order to drive at top speed, Adam must accelerate quickly. If Adam accelerates quickly, he will save the five drowning swimmers. If Adam does not accelerate quickly, the five swimmers will drown. Is accelerating quickly the right thing to do?",
+          "id": 1
+    },
+    {
+          "title": "hControl",
+          "text": "Ben sees that an empty runaway boxcar is headed down a track. There \n is nobody on the track. There is one person working on a side track. If Ben flips the switch, the boxcar will turn onto the side track and hit the one person. If Ben does not flip the switch, the boxcar will continue on the track, and nobody will be hit. Is flipping the switch the right thing to do?",
+          "id": 2
+    }
+]
