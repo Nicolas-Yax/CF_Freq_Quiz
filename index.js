@@ -435,7 +435,7 @@ const appendScenario = (question, asHTML = false, additional = false, example = 
         if (example){
             text = '<b>Example Question</b> <br>' + question;
         } else {
-            text = '<b>Question</b> <br>' + question;
+            text = '<b>Scenario</b> <br>' + question;
         }
     }
     // if (asHTML) {
@@ -484,10 +484,10 @@ const appendDilemma = (question, i) => {
 
     quizQuestionDilemmaDIV.appendChild(quizQuestionDilemma)
 
-    if (i > 1) {
+    /*if (i > 1) {
         quizQuestionDilemmaDIV.disabled = true;
         quizQuestionDilemmaDIV.classList.add('opacityblur')
-    }
+    }*/
 
     document.getElementById('quiz-question-container').appendChild(quizQuestionDilemmaDIV)
 }
@@ -579,8 +579,8 @@ const loadQuestion = async (question, init, additional = false, show_title = tru
     } else if (question.type == `short` || question.type == `long`) {
         appendDilemma(question.answers[0], currentQuestionIndex + 1)
         appendTextFormQuestion(question, additional);
-        
-        appendDilemma(question.answers[1], currentQuestionIndex + 1)
+
+        appendDilemma(question.answers[1], currentQuestionIndex + 2)
         appendTextFormQuestion(question, additional);
         //loadPreviousEnteredText(question.entered)
     }
