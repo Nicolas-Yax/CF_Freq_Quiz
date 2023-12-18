@@ -12,7 +12,7 @@
 	},
 	"work 1":{
 		"S":["work for a known tech company", "are logistics consultants for an important car company", "work in a micro-components factory","are analysts for an international airline"],
-		"A":["is a consultant for the British Museum", "is an advisor to the Minister of Culture", "is an editor for a large online newspaper", "work for a well known Hollywood film production company"]
+		"A":["are consultants for the British Museum", "are advisors to the Minister of Culture", "are editors for a large online newspaper", "work for a well known Hollywood film production company"]
 	},
 	"hobby 2":{
 		"S":["build model airplanes as a hobby", "play Go, during spare time", "enjoy restoring old arcade video games during the week-ends", "volunteer as math teachers in a Prison"],

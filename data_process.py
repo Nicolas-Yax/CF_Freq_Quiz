@@ -4,8 +4,8 @@ import numpy as np
 
 np.random.seed(42)
 
-linda = json.load(open(os.path.join('data','linda2.json')))
-bill = json.load(open(os.path.join('data','bill2.json')))
+linda = json.load(open(os.path.join('data','linda3.json')))
+bill = json.load(open(os.path.join('data','bill3.json')))
 
 def get_list_items():
     return ["order","training 1","hobby 1","work 1","hobby 2"]
@@ -204,7 +204,7 @@ for i in range(len(db)):
     for j in range(len(db[i])):
         db[i][j]['info']['index_um'] = i
 
-json.dump(db,open(os.path.join('data','db2.json'),'w'))
+json.dump(db,open(os.path.join('data','db3.json'),'w'))
 
 """
 #Example condition
