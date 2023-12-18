@@ -578,10 +578,10 @@ const loadQuestion = async (question, init, additional = false, show_title = tru
         loadPreviousEnteredChoice(question.entered);
     } else if (question.type == `short` || question.type == `long`) {
         appendDilemma(question.answers[0], 1)
-        appendTextFormQuestion(question, additional, 1);
+        appendTextFormQuestion(question, additional, 0);
 
         appendDilemma(question.answers[1], 2)
-        appendTextFormQuestion(question, additional, 2);
+        appendTextFormQuestion(question, additional, 1);
         //loadPreviousEnteredText(question.entered)
     }
 
