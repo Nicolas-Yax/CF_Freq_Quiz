@@ -23,7 +23,7 @@ if (condition == 'reasoning'){
         };*/
     }
     //Maybe let them write it themselves ?
-    dataset.instructions[1].items[1].text = "However there is a <b>condition</b> in how you can answer each question : your answer needs to start with the words '<b>Let's think step by step</b>'. To help you with this, these words will already be written and you only have to complete the answer from those words but <b>your answer needs to start with these words</b>. You can repeat them in your head before answering if it helps you.";
+    dataset.instructions[1].items[1].text = "However there is a <b>condition</b> in how you can answer each question : your answer needs to start with the words '<b>Out of those hundred people, I would guess</b>'. To help you with this, these words will already be written and you only have to complete the answer from those words but <b>your answer needs to start with these words</b>. You can repeat them in your head before answering if it helps you.";
     TIME_BETWEEN_QUESTIONS *= 1;
 } else if (condition == 'example'){
     for (let k = 0; k < dataset.questions.length; k++){
