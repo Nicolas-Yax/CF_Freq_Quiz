@@ -114,7 +114,7 @@ const init = async () => {
             new_question["text"] = packs[j][i].question;
             new_question["answers"] = packs[j][i].answers;
             new_question["entered"] = [''];
-            new_question['append'] = "Out of the hundred";
+            new_question['append'] = "[provide a number as answer] Out of those hundred people, I would guess";
             new_question['type'] = 'long'
             new_question["index"] = j*8+i;
             new_question["index_um"] = packs[j][i]['info']['index_um'];
