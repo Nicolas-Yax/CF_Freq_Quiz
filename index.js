@@ -113,7 +113,7 @@ const init = async () => {
             new_question = {};
             new_question["text"] = packs[j][i].question;
             new_question["answers"] = packs[j][i].answers;
-            new_question["entered"] = [''];
+            new_question["entered"] = ['',''];
             new_question['append'] = "[provide a number as answer] Out of those hundred people, I would guess";
             new_question['type'] = 'long'
             new_question["index"] = j*8+i;
@@ -159,9 +159,9 @@ const init = async () => {
 /*----------------------------------------------------------------------------------------------- */
 /* Save data
 /*----------------------------------------------------------------------------------------------- */
-const saveAnswer = (txt, question) => {
+const saveAnswer = (txt, question, idx_question) => {
     // question.entered = question.entered.join(",")
-    question.entered = txt;
+    question.entered[idx_question] = txt;
 }
 
 // Assigns answered question attributes to elements that have been entered by user previously
@@ -185,8 +185,9 @@ const sendItemData = async (idx) => {
         "prolificID": prolificID,
         "index_um": dataset.questions[idx].index_um,
         "questionID": dataset.questions[idx].index,
-        "question": (dataset.questions[idx].text),
-        "answer": dataset.questions[idx].entered,
+        "question": (dataset.questions[idx].text+dataset.questions[idx].answers[0]+dataset.questions[idx].answers[1]),
+        "answer1": dataset.questions[idx].entered[0],
+        "answer2": dataset.questions[idx].entered[1],
         "cond": condition,
         "rt": rt,
     }
@@ -491,7 +492,7 @@ const appendDilemma = (question, i) => {
     document.getElementById('quiz-question-container').appendChild(quizQuestionDilemmaDIV)
 }
 
-const appendTextFormQuestion = (question, additional) => {
+const appendTextFormQuestion = (question, additional, index_subquestion) => {
     let firstdiv = document.createElement(`div`);
     firstdiv.className = "input-contain";
     firstdiv.id = "form"
@@ -531,7 +532,7 @@ const appendTextFormQuestion = (question, additional) => {
         } else {
             input.setCustomValidity("");
         }
-        saveAnswer(input.value, question);
+        saveAnswer(input.value, question, index_subquestion);
     })
 
     if (question.blocked){
@@ -577,10 +578,10 @@ const loadQuestion = async (question, init, additional = false, show_title = tru
         loadPreviousEnteredChoice(question.entered);
     } else if (question.type == `short` || question.type == `long`) {
         appendDilemma(question.answers[0], 1)
-        appendTextFormQuestion(question, additional);
+        appendTextFormQuestion(question, additional, 1);
 
         appendDilemma(question.answers[1], 2)
-        appendTextFormQuestion(question, additional);
+        appendTextFormQuestion(question, additional, 2);
         //loadPreviousEnteredText(question.entered)
     }
 
