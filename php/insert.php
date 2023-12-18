@@ -22,7 +22,7 @@ if ($db->connect_error) {
   die("Connection failed: " . $db->connect_error);
 }
 # '$variable' if string, otherwise $variable
-$sql = "INSERT INTO nicolas_cf_freq_llm (prolific_id, index_um, id_question, question, answer1,answer2, rt, time) VALUES ('$prolific_id', $index_um, $id_question, '$question', '$answer1','$answer2' $rt, NOW())";
+$sql = "INSERT INTO nicolas_cf_freq_llm (prolific_id, index_um, id_question, question, answer1, answer2, rt, time) VALUES ('$prolific_id', $index_um, $id_question, '$question', '$answer1', '$answer2', $rt, NOW())";
 
 if ($db->query($sql) === TRUE) {
   echo "New record created successfully";
