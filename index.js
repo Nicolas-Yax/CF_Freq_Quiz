@@ -185,7 +185,7 @@ const sendItemData = async (idx) => {
         "prolificID": prolificID,
         "index_um": dataset.questions[idx].index_um,
         "questionID": dataset.questions[idx].index,
-        "question": (dataset.questions[idx].text+dataset.questions[idx].answers[0]+dataset.questions[idx].answers[1]),
+        "question": (dataset.questions[idx].text+"//"+dataset.questions[idx].answers[0]+"//"+dataset.questions[idx].answers[1]),
         "answer1": dataset.questions[idx].entered[0],
         "answer2": dataset.questions[idx].entered[1],
         "cond": condition,
@@ -510,8 +510,8 @@ const appendTextFormQuestion = (question, additional, index_subquestion) => {
         input.setCustomValidity("Answer is too short.");
         minlength += question['append'].length;
     }
-    if (question.entered.length > 0){
-        input.value += question.entered[0];
+    if (question.entered[index_subquestion].length > 0){
+        input.value += question.entered[index_subquestion];
         input.style.borderColor = '#999999';
     }
     //input.innerHTML += question['entered'][0]
