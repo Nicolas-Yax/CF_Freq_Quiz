@@ -15,7 +15,7 @@ const condition = 'reasoning';
 
 if (condition == 'reasoning'){
     for (let k = 0; k < dataset.questions.length; k++){
-        dataset.questions[k]['append'] = "Out of  the hundred";
+        dataset.questions[k]['append'] = "[provide a number as answer] Out of those hundred people, I would guess";
         /*dataset.questions[k]['additional'] = {
             "append":"Therefore the answer is",
             "entered":[""],
